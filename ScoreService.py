@@ -1,11 +1,13 @@
 import math
 
-class Scorer(object):
+class D2D(object):
 
+	@classmethod
 	def cosine_similarity(cls, app_list1, app_list2):
 		match_count = cls.count_math(app_list1, app_list2)
 		return float(match_count / math.sqrt(len(app_list1) * len(app_list2)))
 
+	@classmethod
 	def count_math(cls, list1, list2):
 		count = 0
 		for element in list1:
