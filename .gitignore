@@ -1,0 +1,5 @@
+# ignore sublime project
+*.sublime*
+
+# python cache file
+__pycache__
