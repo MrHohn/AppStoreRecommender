@@ -5,3 +5,9 @@
 __pycache__
 
 others
+
+# vim backup file
+*.*~
+
+#pyc file
+*.pyc
