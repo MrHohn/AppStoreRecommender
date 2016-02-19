@@ -18,8 +18,8 @@ class HuaweiSpider(scrapy.Spider):
 
 		for div in divs:
 			item = AppstoreItem()
-			item['title'] = div.xpath('//h4[@class="title"]/a/text()').extract_first().encode('utf-8')
-			item['url'] = div.xpath('//h4[@class="title"]/a/@href').extract_first()
+			item['title'] = div.xpath('.//h4[@class="title"]/a/text()').extract_first().encode('utf-8')
+			item['url'] = div.xpath('.//h4[@class="title"]/a/@href').extract_first()
 			appid = re.match(r'http://.*/(.*)', item['url']).group(1)
 			item['appid'] = appid
 			item['intro'] = div.xpath('.//p[@class="content"]/text()').extract_first().encode('utf-8')

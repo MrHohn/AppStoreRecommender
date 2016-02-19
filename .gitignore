@@ -11,3 +11,6 @@ others
 
 #pyc file
 *.pyc
+
+# crawled data
+*.dat

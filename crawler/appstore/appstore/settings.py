@@ -25,6 +25,8 @@ NEWSPIDER_MODULE = 'appstore.spiders'
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY=3
+DOWNLOAD_DELAY=5
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN=16
 #CONCURRENT_REQUESTS_PER_IP=16
@@ -64,6 +66,12 @@ NEWSPIDER_MODULE = 'appstore.spiders'
 #ITEM_PIPELINES = {
 #    'appstore.pipelines.SomePipeline': 300,
 #}
+
+# 300 is the priority
+ITEM_PIPELINES = {
+    'appstore.pipelines.AppstorePipeline': 300,
+}
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
