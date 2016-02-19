@@ -25,7 +25,7 @@ NEWSPIDER_MODULE = 'appstore.spiders'
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY=3
-DOWNLOAD_DELAY=3
+DOWNLOAD_DELAY=1
 
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN=16
@@ -54,6 +54,11 @@ DOWNLOAD_DELAY=3
 #DOWNLOADER_MIDDLEWARES = {
 #    'appstore.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
+DOWNLOADER_MIDDLEWARES = {
+	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'appstore.random_useragent.RandomUserAgentMiddleware': 400,
+	# 'appstore.random_proxy.RandomProxyMiddleware': 100
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
