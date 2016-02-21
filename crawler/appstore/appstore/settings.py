@@ -56,9 +56,15 @@ DOWNLOAD_DELAY=1
 #}
 DOWNLOADER_MIDDLEWARES = {
 	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    'appstore.random_useragent.RandomUserAgentMiddleware': 400,
+	'scrapyjs.SplashMiddleware': 725,
+    'appstore.random_useragent.RandomUserAgentMiddleware': 400
 	# 'appstore.random_proxy.RandomProxyMiddleware': 100
 }
+
+# SPLASH_URL = 'http://localhost:8050/'
+SPLASH_URL = 'http://192.168.99.100:8050/'
+DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
