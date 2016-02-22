@@ -8,7 +8,7 @@
 import scrapy
 
 
-class AppstoreItem(scrapy.Item):
+class HuaweiItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     # pass

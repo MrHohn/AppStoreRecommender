@@ -12,7 +12,7 @@ class RandomUserAgentMiddleware(UserAgentMiddleware):
 		ua = random.choice(self.user_agent_list)
 		# ua = "Scrapy/VERSION (+http://scrapy.org)"
 		if ua:
-			print "*******Current UserAgent:%s********" %ua
+			print "*******Current UserAgent: %s********" %ua
 			request.headers.setdefault('User-Agent', ua)
 
 		# Add desired logging message here.

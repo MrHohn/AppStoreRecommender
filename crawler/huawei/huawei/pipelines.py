@@ -6,9 +6,9 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class AppstorePipeline(object):
+class HuaweiPipeline(object):
 	def __init__(self):
-		self.file = open('appstore.dat', 'wb')
+		self.file = open('huawei.dat', 'wb')
 		
 	def process_item(self, item, spider):
 		val = "{0}\t{1}\t{2}\t{3}\n".format(item['appid'], item['title'], item['thumbnail'], item['recommended'])
